@@ -8,8 +8,8 @@ feature 'create new achievement' do
     fill_in('Title', with: 'Read a book')
     fill_in('Description', with: 'Excellent read')
     select('Public', from: 'Privacy')
-    check('Feature achievement')
-    attach_file('Cover', "#{Rails.root}/spec/fixtures/cover_image.png")
+    check('Featured achievement')
+    attach_file('Cover image', "#{Rails.root}/spec/fixtures/cover_image.png")
     click_on('Create Achievement')
 
     expect(page).to have_content('Achievement has been created')
