@@ -5,7 +5,8 @@ class AchievementsController < ApplicationController
 
   def show
     @achievement = Achievement.find(params[:id])
-    @description = @achievement.description.html_safe
+    @description = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+                       .render(@achievement.description).html_safe
   end
 
   def create

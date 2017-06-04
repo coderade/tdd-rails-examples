@@ -6,12 +6,16 @@ feature 'achievement_page' do
     visit("/achievements/#{achievement.id}")
 
     expect(page).to have_content('Just did it')
+
+    # Create list of items with FactoryGirl example.
+    # achievements = FactoryGirl.create_list(:achievement, 3)
+    # p achievements
   end
 
   scenario 'render markdown description' do
-    achievement = FactoryGirl.create(:achievement, description: 'That was a description')
+    achievement = FactoryGirl.create(:achievement, description: 'That *was* a description')
     visit("/achievements/#{achievement.id}")
 
-    expect(page).to have_content('was a description')
+    expect(page).to have_css('em','was')
   end
 end
