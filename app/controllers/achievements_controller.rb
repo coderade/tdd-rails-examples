@@ -3,6 +3,10 @@ class AchievementsController < ApplicationController
     @achievement =  Achievement.new
   end
 
+  def show
+    @achievement = Achievement.find(params[:id])
+  end
+
   def create
     @achievement = Achievement.new(achievement_params)
     if @achievement.save
