@@ -5,6 +5,7 @@ class AchievementsController < ApplicationController
 
   def show
     @achievement = Achievement.find(params[:id])
+    @description = @achievement.description.html_safe
   end
 
   def create
