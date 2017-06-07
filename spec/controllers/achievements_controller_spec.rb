@@ -49,6 +49,18 @@ describe AchievementsController do
     end
 
     context 'invalid data' do
+      let(:invalid_data) {FactoryGirl.attributes_for(:public_achievement, title: '', description: 'new')}
+
+      it 'renders :edit template' do
+        put :update, params: { id: achievement, achievement: invalid_data }
+        expect(response).to render_template(:edit)
+      end
+
+      it "doesn't update achievement in the database" do
+        put :update, params: { id: achievement, achievement: invalid_data }
+        achievement.reload
+        expect(achievement.description).not_to eq('new')
+      end
 
     end
   end
@@ -108,6 +120,20 @@ describe AchievementsController do
           post :create, params: { achievement: invalid_data }
         }.not_to change(Achievement, :count)
       end
+    end
+  end
+
+  describe 'DELETE destroy' do
+    let(:achievement) {FactoryGirl.create(:public_achievement)}
+
+    it 'redirects to achievements#index' do
+      delete :destroy, params: {id: achievement}
+      expect(response).to redirect_to(achievements_path)
+    end
+
+    it 'deletes achievements from database' do
+      delete :destroy, params: {id: achievement}
+      expect(Achievement.exists?(achievement.id)).to be(false)
     end
   end
 
