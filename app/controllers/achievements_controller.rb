@@ -11,7 +11,7 @@ class AchievementsController < ApplicationController
   def create
     @achievement = Achievement.new(achievement_params)
     if @achievement.save
-      redirect_to root_url, notice: 'Achievement has been created.'
+      redirect_to achievement_url(@achievement), notice: 'Achievement has been created.'
     else
       render :new
     end
