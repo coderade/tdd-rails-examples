@@ -10,7 +10,6 @@ describe AchievementsController do
 
     it 'assigns only public achievements to template' do
       public_achievement = FactoryGirl.create(:public_achievement)
-      private_achievement = FactoryGirl.create(:private_achievement)
       get :index
       expect(assigns(:achievements)).to match_array([public_achievement])
     end
@@ -27,6 +26,30 @@ describe AchievementsController do
     it 'assigns requested achievement to template' do
       get :edit,  params: { id: achievement }
       expect(assigns(:achievement)).to eq(achievement)
+    end
+  end
+
+
+  describe 'PUT update' do
+    let(:achievement) {FactoryGirl.create(:public_achievement)}
+
+    context 'valid data' do
+      let(:valid_data) {FactoryGirl.attributes_for(:public_achievement, title: 'New Title')}
+
+      it 'redirects to achievement#show' do
+        put :update, params: { id: achievement, achievement: valid_data }
+        expect(response).to redirect_to(achievement_path)
+      end
+
+      it 'updates achievement in the database' do
+        put :update, params: { id: achievement, achievement: valid_data }
+        achievement.reload
+        expect(achievement.title).to eq('New Title')
+      end
+    end
+
+    context 'invalid data' do
+
     end
   end
 

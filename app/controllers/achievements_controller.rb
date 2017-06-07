@@ -15,6 +15,15 @@ class AchievementsController < ApplicationController
     @achievement = Achievement.find(params[:id])
   end
 
+  def update
+    @achievement = Achievement.find(params[:id])
+    if @achievement.update_attributes(achievement_params)
+      redirect_to achievement_path(@achievement)
+    end
+
+
+  end
+
   def create
     @achievement = Achievement.new(achievement_params)
     if @achievement.save
