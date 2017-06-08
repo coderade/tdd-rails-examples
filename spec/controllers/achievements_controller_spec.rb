@@ -22,7 +22,7 @@ describe AchievementsController do
 
       it 'renders :show template' do
         get :show, params: {id: achievement}
-        expect(response).to render_template(:edit)
+        expect(response).to render_template(:show)
       end
 
       it 'assigns requested achievement to @achievement' do
@@ -76,7 +76,7 @@ describe AchievementsController do
   end
 
   describe 'authenticated_user' do
-    let(:user) {FactoryGirl.create :user}
+    let(:user) {FactoryGirl.create(:user)}
 
     before do
       sign_in(user)
@@ -172,7 +172,7 @@ describe AchievementsController do
       end
 
       describe 'DELETE destroy' do
-        let(:achievement) {FactoryGirl.create(:public_achievement)}
+        let(:achievement) {FactoryGirl.create(:public_achievement,)}
 
         it 'redirects to achievement page' do
           delete :destroy, params: {id: achievement}
@@ -182,115 +182,69 @@ describe AchievementsController do
     end
 
     context 'is the owner of the achievement' do
+      let(:achievement) {FactoryGirl.create(:public_achievement, user: user)}
 
-    end
-  end
+      describe 'GET edit' do
 
-  describe 'GET edit' do
-    let(:achievement) {FactoryGirl.create(:public_achievement)}
+        it 'renders :edit template' do
+          get :edit, params: {id: achievement}
+          expect(response).to render_template(:edit)
+        end
 
-    it 'renders :show template' do
-      get :show, params: {id: achievement}
-      expect(response).to render_template(:show)
-    end
-
-    it 'assigns requested achievement to template' do
-      get :edit, params: {id: achievement}
-      expect(assigns(:achievement)).to eq(achievement)
-    end
-  end
-
-  describe 'PUT update' do
-    let(:achievement) {FactoryGirl.create(:public_achievement)}
-
-    context 'valid data' do
-      let(:valid_data) {FactoryGirl.attributes_for(:public_achievement, title: 'New Title')}
-
-      it 'redirects to achievement#show' do
-        put :update, params: {id: achievement, achievement: valid_data}
-        expect(response).to redirect_to(achievement_path)
+        it 'assigns requested achievement to template' do
+          get :edit, params: {id: achievement}
+          expect(assigns(:achievement)).to eq(achievement)
+        end
       end
 
-      it 'updates achievement in the database' do
-        put :update, params: {id: achievement, achievement: valid_data}
-        achievement.reload
-        expect(achievement.title).to eq('New Title')
-      end
-    end
+      describe 'PUT update' do
 
-    context 'invalid data' do
-      let(:invalid_data) {FactoryGirl.attributes_for(:public_achievement, title: '', description: 'new')}
+        context 'valid data' do
+          let(:valid_data) {FactoryGirl.attributes_for(:public_achievement, title: 'New Title')}
 
-      it 'renders :edit template' do
-        put :update, params: {id: achievement, achievement: invalid_data}
-        expect(response).to render_template(:edit)
-      end
+          it 'redirects to achievement#show' do
+            put :update, params: {id: achievement, achievement: valid_data}
+            expect(response).to redirect_to(achievement_path)
+          end
 
-      it "doesn't update achievement in the database" do
-        put :update, params: {id: achievement, achievement: invalid_data}
-        achievement.reload
-        expect(achievement.description).not_to eq('new')
-      end
+          it 'updates achievement in the database' do
+            put :update, params: {id: achievement, achievement: valid_data}
+            achievement.reload
+            expect(achievement.title).to eq('New Title')
+          end
+        end
 
-    end
-  end
+        context 'invalid data' do
+          let(:invalid_data) {FactoryGirl.attributes_for(:public_achievement, title: '', description: 'new')}
 
-  describe 'GET new' do
-    it 'renders :new template' do
-      get :new
-      expect(response).to render_template(:new)
-    end
+          it 'renders :edit template' do
+            put :update, params: {id: achievement, achievement: invalid_data}
+            expect(response).to render_template(:edit)
+          end
 
-    it 'assigns new Achievement to @achievement' do
-      get :new
-      expect(assigns(:achievement)).to be_a_new(Achievement)
-    end
+          it "doesn't update achievement in the database" do
+            put :update, params: {id: achievement, achievement: invalid_data}
+            achievement.reload
+            expect(achievement.description).not_to eq('new')
+          end
 
-  end
-
-  describe 'POST create' do
-    context 'valid data' do
-      let(:valid_data) {FactoryGirl.attributes_for(:public_achievement)}
-      it 'redirect to achievement#show' do
-        post :create, params: {achievement: valid_data}
-        expect(response).to redirect_to(achievement_path(assigns[:achievement]))
+        end
       end
 
-      it 'creates new achievement in database' do
-        expect {
-          post :create, params: {achievement: valid_data}
-        }.to change(Achievement, :count).by(1)
-      end
-    end
+      describe 'DELETE destroy' do
 
-    context 'invalid date' do
-      let(:invalid_data) {FactoryGirl.attributes_for(:public_achievement, title: '')}
+        it 'redirects to achievements#index' do
+          delete :destroy, params: {id: achievement}
+          expect(response).to redirect_to(achievements_path)
+        end
 
-      it 'renders :new template' do
-        post :create, params: {achievement: invalid_data}
-        expect(response).to render_template(:new)
-      end
-
-      it "doesn't create new achievement in database" do
-        expect {
-          post :create, params: {achievement: invalid_data}
-        }.not_to change(Achievement, :count)
+        it 'deletes achievements from database' do
+          delete :destroy, params: {id: achievement}
+          expect(Achievement.exists?(achievement.id)).to be(false)
+        end
       end
     end
   end
 
-  describe 'DELETE destroy' do
-    let(:achievement) {FactoryGirl.create(:public_achievement)}
-
-    it 'redirects to achievements#index' do
-      delete :destroy, params: {id: achievement}
-      expect(response).to redirect_to(achievements_path)
-    end
-
-    it 'deletes achievements from database' do
-      delete :destroy, params: {id: achievement}
-      expect(Achievement.exists?(achievement.id)).to be(false)
-    end
-  end
 
 end
