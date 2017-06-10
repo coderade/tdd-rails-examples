@@ -2,7 +2,10 @@ class Achievement < ApplicationRecord
   belongs_to :user, optional: true
 
   validates_presence_of :title, { message: "Title can't be blank" }
+	validates_presence_of :user
+
 	validates_uniqueness_of :title, :scope => :user_id
+
 
 	# validate :unique_title_for_one_user
 
