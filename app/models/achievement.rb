@@ -4,7 +4,10 @@ class Achievement < ApplicationRecord
   validates_presence_of :title, { message: "Title can't be blank" }
 	validates_presence_of :user
 
-	validates_uniqueness_of :title, :scope => :user_id
+	validates_uniqueness_of :title, {
+			:scope => :user_id,
+			message: "You can't have two achievements with the same title."
+	}
 
 
 	# validate :unique_title_for_one_user
