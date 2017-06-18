@@ -29,7 +29,7 @@ class AchievementsController < ApplicationController
   end
 
   def create
-    service = CreateAchievement.new(params[:achievement], current_user)
+    service = CreateAchievement.new(achievement_params, current_user)
     service.create
     render body: nil
   end

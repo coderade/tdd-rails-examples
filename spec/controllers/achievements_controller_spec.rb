@@ -31,8 +31,9 @@ describe AchievementsController do
 		end
 
 		describe 'POST create' do
-			let(:achievement_params) { {title: 'title'} }
+			let(:achievement_params) { ActionController::Parameters.new('title': 'title').permit(:title) }
 			let(:create_achievement) {instance_double(CreateAchievement)}
+
 
 			before do
 				allow(CreateAchievement).to receive(:new) {create_achievement}
@@ -41,7 +42,7 @@ describe AchievementsController do
 			it 'sends create message to CreateAchievement' do
 				expect(CreateAchievement).to receive(:new).with(achievement_params, user)
 				expect(create_achievement).to receive(:create)
-				post :create, params: {achievement: achievement_params}
+				post :create, params: {achievement: achievement_params }
 			end
 		end
 
