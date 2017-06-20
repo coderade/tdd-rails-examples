@@ -1,9 +1,8 @@
 class CreateAchievement
-	def initialize(params, user)
+	attr_reader :achievement
+	def initialize(params, user); end
 
-	end
+	def create; end
 
-	def create
-
-	end
+	def created?; end
 end
