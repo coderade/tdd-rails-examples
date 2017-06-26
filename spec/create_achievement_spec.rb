@@ -13,12 +13,15 @@ feature 'create new achievement' do
 
   scenario 'create new achievement with valid data' do
     new_achievement_form.visit_page.fill_in_with(
-        title: 'Read a book'
+        title: 'Read a book',
+				cover_image: 'cover_image.png'
     ).submit
 
 		expect(ActionMailer::Base.deliveries.count).to eq(1)
     expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
-    expect(page).to have_content('Achievement has been created')
+
+		expect(Achievement.last.cover_image_identifier).to eq('cover_image.png')
+		expect(page).to have_content('Achievement has been created')
     expect(Achievement.last.title).to eq('Read a book')
 
   end

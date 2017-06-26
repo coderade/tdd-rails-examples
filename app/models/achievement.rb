@@ -9,10 +9,11 @@ class Achievement < ApplicationRecord
 			message: "You can't have two achievements with the same title."
 	}
 
-
   enum privacy: [:public_access, :private_access, :friends_access]
 
-  def description_html
+  mount_uploader :cover_image, CoverImageUploader
+
+	def description_html
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(description).html_safe
   end
 
