@@ -3,6 +3,13 @@ require 'spec_helper'
 require 'factory_girl_rails'
 require 'shoulda/matchers'
 require 'devise'
+require 'vcr'
+
+VCR.configure do |c|
+	c.cassette_library_dir = 'spec/cassettes'
+	c.hook_into :webmock
+	c.configure_rspec_metadata!
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
