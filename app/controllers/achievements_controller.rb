@@ -1,9 +1,6 @@
 class AchievementsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-
-  before_action :user_is_owner, only: [:edit, :update, :destroy] do
-
-  end
+  before_action :user_is_owner, only: [:edit, :update, :destroy]
 
   def index
     @achievements = Achievement.public_access
