@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 feature 'achievement_page' do
+  let(:user) {FactoryGirl.create(:user)}
   scenario 'achievement public page' do
-    achievement = FactoryGirl.create(:achievement, title: 'Just did it')
+
+    achievement = FactoryGirl.create(:achievement, title: 'Just did it', user: user)
     visit("/achievements/#{achievement.id}")
 
     expect(page).to have_content('Just did it')
@@ -13,7 +15,7 @@ feature 'achievement_page' do
   end
 
   scenario 'render markdown description' do
-    achievement = FactoryGirl.create(:achievement, description: 'That *was* a description')
+    achievement = FactoryGirl.create(:achievement, description: 'That *was* a description', user: user)
     visit("/achievements/#{achievement.id}")
 
     expect(page).to have_css('em','was')
