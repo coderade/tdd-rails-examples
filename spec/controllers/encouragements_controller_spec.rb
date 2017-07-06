@@ -13,18 +13,22 @@ RSpec.describe EncouragementsController do
 		end
 
 		it 'assigns flash message' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(flash[:alert]).to eq('You must be logged in to encourage people')
 		end
 
 	end
 
 	context 'autheticated user' do
+		before {sign_in(user)}
 		it 'renders :new template' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(response).to render_template(:new)
 		end
 
 		it 'assigns new encouragement to the template' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(assigns(:encouragement)).to be_a_new(Encouragement)
 		end
 	end
 
