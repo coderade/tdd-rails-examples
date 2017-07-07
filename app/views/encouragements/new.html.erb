@@ -1,0 +1,5 @@
+<%= simple_form_for [@achievement, @encouragement] do |f| %>
+    <%= f.text_field :message, placeholder: 'Say something nice...' %>
+
+    <%= f.submit 'Encourage' %>
+<% end %>

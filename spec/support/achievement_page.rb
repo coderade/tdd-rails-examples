@@ -7,7 +7,7 @@ class AchievementPage
 	end
 
 	def encourage
-		click_on('encourage-button')
+		click_link_or_button('encourage-button')
 		self
 	end
 end

@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'support/login_form'
+require 'support/encouragement_form'
 require 'support/achievement_page'
 
 feature 'create encouragement' do
