@@ -1,4 +1,5 @@
 class Achievement < ApplicationRecord
+	has_many :encouragements
   belongs_to :user, optional: true
 
   validates_presence_of :title, { message: "Title can't be blank" }
