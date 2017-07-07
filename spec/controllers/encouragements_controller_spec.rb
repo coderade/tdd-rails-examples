@@ -33,22 +33,32 @@ RSpec.describe EncouragementsController do
 	end
 
 	context 'achievement author' do
+		before {sign_in(author)}
 		it 'is redirected back to achievement page' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(response).to redirect_to(achievement_path(achievement))
 		end
 
 		it 'assigns flash message' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(flash[:alert]).to eq("You can't encourage yourself.")
 		end
 	end
 
 	context 'user who already left encouragement for this achievement' do
-		it 'is redirected back to achievement page' do
+		before do
+			sign_in(user)
+			FactoryGirl.create(:encouragement, user:user, achievement: achievement )
+		end
 
+		it 'is redirected back to achievement page' do
+			get :new, params: {achievement_id: achievement.id}
+			expect(response).to redirect_to(achievement_path(achievement))
 		end
 
 		it 'assigns flash message' do
-
+			get :new, params: {achievement_id: achievement.id}
+			expect(flash[:alert]).to eq("You already encouraged it. You can't be so generous.")
 		end
 	end
 end
