@@ -22,12 +22,13 @@
         <%= link_to('New Achievement', new_achievement_path, :class => 'nav-link') %>
       </li>
     </ul>
-
+    <% if user_signed_in? %>
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
         <%= link_to('Logout', destroy_user_session_path, :method => 'delete', :class => 'nav-link') %>
       </li>
     </ul>
+    <% end %>
   </div>
 </nav>
 
