@@ -8,7 +8,8 @@
 </head>
 <body>
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="/">Rails TDD Examples</a>
@@ -18,7 +19,13 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <%=  link_to('New Achievement', new_achievement_path, :class => 'nav-link')  %>
+        <%= link_to('New Achievement', new_achievement_path, :class => 'nav-link') %>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <%= link_to('Logout', destroy_user_session_path, :method => 'delete', :class => 'nav-link') %>
       </li>
     </ul>
   </div>
@@ -30,12 +37,14 @@
         <div class="notice">
           <p class="alert alert-success"> <%= flash[:notice] %> </p>
         </div>
-    <% elsif flash[:error].present? %>
-        <div class="error">
-          <p class="alert alert-danger"> <%= flash[:error] %> </p>
-        </div>
-    <% else %>
     <% end %>
+
+    <% if flash[:alert].present? %>
+        <div class="error">
+          <p class="alert alert-danger"> <%= flash[:alert] %> </p>
+        </div>
+    <% end %>
+
 
     <%= yield %>
 
