@@ -1,10 +1,14 @@
 class TwitterService
 	def initialize
+
+		# To configure your API client,
+		# you need to create a simple twitter application on the link https://apps.twitter.com
+
 		@client = Twitter::REST::Client.new do |config|
-			config.consumer_key = 'ZP4LQvAtV7DsHfFQhLyabdYqG'
-			config.consumer_secret = '9tQUWEqB7c3eQIksWZclaAqC44L9OpFwfhKP8AK4NgZpgWL2KM'
-			config.access_token = '321696384-snChjxRMU3KE6BeyvlGhHCmUJkyNnSVjgpFyUdsJ'
-			config.access_token_secret = '4VLiyN6nKAtrtpZmlzhLt5ooTjGNoJIsE4H8ThIqgJKEc'
+			config.consumer_key = 'YOUR CONSUMER KEY HERE'
+			config.consumer_secret = 'YOUR CONSUMER SECRET HERE'
+			config.access_token = 'YOUR ACCESS TOKEN HERE'
+			config.access_token_secret = 'YOUR ACESS TOKEN SECRET HERE'
 		end
 	end
 
