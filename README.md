@@ -50,9 +50,9 @@ Simple Red Green Refactor example with Minitest.
 
 See the [string_calculator.rb](string_calculator.rb) file.
 
-##### Running
+###### Running
 
-To run on the root of the project enter:
+To run, on the root of the project enter:
 
     ruby string_calculator.rb
     
@@ -68,11 +68,60 @@ To run all the specs on the root of the project enter `rspec`.
 
 Simple example with RSpec.
 
-See the [playground_spec.rb](spec/playground_spec.rb) and [lib/playground.rb](lib/playground.rb) files.
+
+See the following files for a better understanding:
+
+* `playground_spec.rb`=>  [playground_spec.rb](spec/playground_spec.rb) 
+* `playground.rb` =>  [lib/playground.rb](lib/playground.rb)
 
     
-##### Running
+###### Running
 
-To run on the root of the project enter:
+To run this spec, on the root of the project enter:
 
     rspec spec/playground_spec.rb 
+
+
+#### Bowling Game - Advanced RSpec example
+
+More complex example with RSpec based on a bowling game. 
+
+
+See the following files for a better understanding:
+
+* `bowling_game_spec.rb`=>  [bowling_game_spec.rb](spec/bowling_game_spec.rb)
+* `bowling_game.rb` =>  [lib/bowling_game.rb](lib/bowling_game.rb)
+
+    
+###### Running
+
+To run this spec, on the root of the project enter:
+
+    rspec spec/bowling_game_spec.rb 
+
+
+#### Create Achievement spec
+
+Spec testing the achievement creation
+
+See the following files for a better understanding:
+
+###### Main files:
+
+* `create_achievement_spec.rb`=>  [spec/create_achievement_spec.rb](spec/create_achievement_spec.rb)
+
+###### Support files:
+* `login_form.rb` =>  [spec/support/login_form.rb](spec/support/login_form.rb)
+* `new_achievement_form.rb` =>  [spec/support/new_achievement_form.rb](spec/support/new_achievement_form.rb)
+
+###### Factory files:
+* `achievements.rb` =>  [spec/factories/achievements.rb](spec/factories/achievements.rb) 
+* `users.rb` =>  [spec/factories/users.rb](spec/factories/users.rb) 
+    
+###### Running
+
+To run this spec, on the root of the project enter:
+
+    rspec spec/create_achievement_spec.rb 
+
+> This spec is failing, the fail is related with the Third API testing with Twitter.
