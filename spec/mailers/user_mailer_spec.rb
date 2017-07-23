@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UserMailer, type: :mailer do
-	
+
 	include Rails.application.routes.url_helpers
 
 	let(:achievement_id) {1}
