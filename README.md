@@ -6,7 +6,7 @@ This project contains some examples of how use TDD with Ruby on Rails.
 
 The main technologies and Rails gems used in this project are:
 
-#### Development
+### Development
 * [Rails 5](http://rubyonrails.org/) - a web-application framework that includes everything needed to create 
 database-backed web applications according to the Model-View-Controller (MVC) pattern.
 * [Devise](https://github.com/plataformatec/devise) - flexible authentication solution for Rails with Warden.   
@@ -16,7 +16,7 @@ Sinatra and other Ruby web frameworks.
 * [ActiveModelSerializers](https://github.com/rails-api/active_model_serializers) - ActiveModel::Serializer 
 implementation and Rails hooks.
 
-#### Testing
+### Testing
 * [Capybara](https://github.com/teamcapybara/capybara) - acceptance test framework for web applications.
 * [Rspec](https://github.com/rspec/rspec-rails) - testing framework for Rails 3.x, 4.x and 5.0.
 * [Cucumber](https://cucumber.io/) - software tool used by computer programmers for testing other software. It runs 
@@ -37,23 +37,42 @@ the behaviour of a real user, and as such interacts with the HTML of the applica
 * [Rails Controller Testing](https://github.com/rails/rails-controller-testing) - brings back `assigns` and `assert_template` 
 to the Rails tests.  
 
-#### Database      
+### Database      
 
 As this is a simple application that don't need great data persistence the default database used when a new Ruby on Rails
-application is created has been used: [SQlite3](https://www.sqlite.org/)
+application is created has been used: [SQlite3](https://www.sqlite.org/).
 
 ##  Examples
 
-#### String Cauculator - Simple Red Green Refactor sample with Minitest
+### String Cauculator - Simple Red Green Refactor example with Minitest
 
-Simple Red Green Refactor sample with Minitest. 
+Simple Red Green Refactor example with Minitest. 
+
 See the [string_calculator.rb](string_calculator.rb) file.
 
-###### Running
+##### Running
 
 To run on the root of the project enter:
 
     ruby string_calculator.rb
     
+### RSpec examples
 
+There is many RSpec examples testing examples on this project, for instance 79 specs. All they are running with success.
 
+To run all the specs on the root of the project enter `rspec`.
+
+> There are three specs failing, they are related with the Third API testing with Twitter.
+
+#### Playground - Simple RSpec example
+
+Simple example with RSpec.
+
+See the [playground_spec.rb](spec/playground_spec.rb) and [lib/playground.rb](lib/playground.rb) files.
+
+    
+##### Running
+
+To run on the root of the project enter:
+
+    rspec spec/playground_spec.rb 
