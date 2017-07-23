@@ -195,7 +195,14 @@ See the following files for a better understanding:
 To run this spec, on the root of the project enter:
 
     rspec spec/models/achievement_spec.rb
+    
 
+### Isolation Tests
+
+There are some isolation tests examples using the Mock and Stubs concepts created on the 
+[mock-and-stubs](https://github.com/coderade/tdd-rails-examples/tree/mocks-and-stubs) branch.
+
+For more information see: [Isolation tests examples](https://github.com/coderade/tdd-rails-examples/tree/mocks-and-stubs#isolation-testing-examples-with-rspec)
 
 ### Cucumber examples
 
