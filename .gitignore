@@ -12,3 +12,6 @@
 /.idea *
 /public/system/*
 .rvmrc
+
+# Ignore generated VCR cassettes files
+spec/cassettes/*
