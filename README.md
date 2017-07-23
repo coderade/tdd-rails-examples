@@ -115,7 +115,7 @@ To run this spec, on the root of the project enter:
 
 #### Create Achievement spec
 
-Spec testing the achievement creation
+Spec testing the achievement creation, authentication and authorization.
 
 See the following files for a better understanding:
 
@@ -138,6 +138,37 @@ To run this spec, on the root of the project enter:
     rspec spec/create_achievement_spec.rb 
 
 > This spec is failing, the fail is related with the Third API testing with Twitter.
+
+
+
+#### Achievements Controller spec
+
+Spec testing the Achievement controller, more specifically your CRUD operations like show, create, update, edit and destroy 
+methods in addition to authentication and authorization.
+
+See the following files for a better understanding:
+
+###### Spec file:
+
+* `achievements_controller_spec.rb`=>  [spec/controllers/achievements_controller_spec.rb](spec/controllers/achievements_controller_spec.rb)
+
+###### Controller
+
+* `achievements_controller.rb`=>  [app/controllers/achievements_controller.rb](app/controllers/achievements_controller.rb)
+
+###### Support files:
+* `login_form.rb` =>  [spec/support/login_form.rb](spec/support/login_form.rb)
+* `new_achievement_form.rb` =>  [spec/support/new_achievement_form.rb](spec/support/new_achievement_form.rb)
+
+###### Factory files:
+* `achievements.rb` =>  [spec/factories/achievements.rb](spec/factories/achievements.rb) 
+* `users.rb` =>  [spec/factories/users.rb](spec/factories/users.rb) 
+    
+##### Running
+
+To run this spec, on the root of the project enter:
+
+    rspec spec/controllers/encouragements_controller_spec.rb 
 
 
 ### Cucumber examples
