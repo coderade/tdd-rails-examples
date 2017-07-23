@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UserMailer, type: :mailer do
+	
 	include Rails.application.routes.url_helpers
 
 	let(:achievement_id) {1}
@@ -11,7 +12,7 @@ RSpec.describe UserMailer, type: :mailer do
 	end
 
 	it 'has correct subject' do
-		expect(email.subject). to eq('Congratulations with your new achievement!')
+		expect(email.subject).to eq('Congratulations with your new achievement!')
 	end
 
 	it 'has achievement link in body message' do
