@@ -5,7 +5,20 @@
 </div>
 
 <div class="encouragement">
-  <h2>Encouragements</h2>
+  <h2>Encouragements
+    <span id="encouragement-quantity">
+      <%=	@achievement.encouragements.count %>
+    </span>
+  </h2>
+
+  <ul>
+    <% @achievement.encouragements.each do |enc| %>
+        <li> Encouragement left by
+          <%= enc.user.email %> : <%= enc.message %></li>
+    <% end %>
+  </ul>
+
+
 
   <%= link_to 'Encourage', new_achievement_encouragement_path(@achievement), id: 'encourage-button' %>
 </div>
