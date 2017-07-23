@@ -6,7 +6,27 @@ class EncouragementsController < ApplicationController
 
   def new
     @encouragement = Encouragement.new
-  end
+	end
+
+	def create
+		@encouragement = Encouragement.new(encouragement_params.merge(
+			user: current_user,
+			achievement: @achievement
+		))
+
+		if @encouragement.save
+			redirect_to achievement_path(@achievement), notice: 'Thank you for encouragement.'
+		else
+			render :new
+		end
+
+	end
+
+	private
+
+	def encouragement_params
+		params.require(:encouragement).permit(:message)
+	end
 
 	def authenticate_user
     @achievement = Achievement.find(params[:achievement_id])
@@ -27,4 +47,5 @@ class EncouragementsController < ApplicationController
 			redirect_to achievement_path(@achievement), alert: "You already encouraged it. You can't be so generous."
 		end
 	end
+
 end

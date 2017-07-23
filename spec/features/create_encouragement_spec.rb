@@ -5,7 +5,8 @@ require 'support/achievement_page'
 
 feature 'create encouragement' do
 	let(:user) {FactoryGirl.create(:user)}
-	let(:achievement) {FactoryGirl.create(:achievement, user: user)}
+	let(:author) {FactoryGirl.create(:user)}
+	let(:achievement) {FactoryGirl.create(:achievement, user: author)}
 
 	let(:login_form) {LoginForm.new}
 	let(:achievement_page) {AchievementPage.new}
