@@ -41,3 +41,54 @@ to the Rails tests.
 
 As this is a simple application that don't need great data persistence. The [SQlite3](https://www.sqlite.org/) has been used 
 that is the default database when a new Ruby on Rails application is created.
+
+## Examples
+
+### Isolation testing examples with Rspec
+
+#### Simple Game - Mock and Stub non Rails example
+
+Non Rais game spec example using the Mock and Stubs concepts.  
+
+###### Test file:
+
+* `game_mock_stub_spec.rb`=>  [spec/game_mock_stub_spec.rb](spec/game_mock_stub_spec.rb)
+
+##### Running
+
+To run, on the root of the project enter:
+
+    rspec spec/game_mock_stub_spec.rb 
+    
+#### Achievements Controller Testing in Isolation spec
+
+Some isolation testing examples with the Achievement Controller.
+
+See the following files for a better understanding:
+
+###### Spec file:
+
+* `achievements_controller_spec.rb`=>  [spec/controllers/achievements_controller_spec.rb](spec/controllers/achievements_controller_spec.rb)
+
+###### Controller
+
+* `achievements_controller.rb`=>  [app/controllers/achievements_controller.rb](app/controllers/achievements_controller.rb)
+
+###### Services
+
+* `create_achievement.rb` =>  [app/services/create_achievement.rb](app/services/create_achievement.rb)
+
+###### Support files:
+* `login_form.rb` =>  [spec/support/login_form.rb](spec/support/login_form.rb)
+* `new_achievement_form.rb` =>  [spec/support/new_achievement_form.rb](spec/support/new_achievement_form.rb)
+
+
+###### Factory files:
+* `achievements.rb` =>  [spec/factories/achievements.rb](spec/factories/achievements.rb) 
+* `users.rb` =>  [spec/factories/users.rb](spec/factories/users.rb) 
+    
+##### Running
+
+To run this spec, on the root of the project enter:
+
+    rspec spec/controllers/encouragements_controller_spec.rb 
