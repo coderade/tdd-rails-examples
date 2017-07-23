@@ -48,9 +48,12 @@ application is created has been used: [SQlite3](https://www.sqlite.org/).
 
 Simple Red Green Refactor example with Minitest. 
 
-See the [string_calculator.rb](string_calculator.rb) file.
+###### Test file:
 
-###### Running
+* `string_calculator.rb`=>  [string_calculator.rb](string_calculator.rb)
+
+
+##### Running
 
 To run, on the root of the project enter:
 
@@ -71,11 +74,16 @@ Simple example with RSpec.
 
 See the following files for a better understanding:
 
+###### Spec file:
+
 * `playground_spec.rb`=>  [playground_spec.rb](spec/playground_spec.rb) 
+
+###### Support files:
+
 * `playground.rb` =>  [lib/playground.rb](lib/playground.rb)
 
     
-###### Running
+##### Running
 
 To run this spec, on the root of the project enter:
 
@@ -89,11 +97,16 @@ More complex example with RSpec based on a bowling game.
 
 See the following files for a better understanding:
 
+###### Spec file:
+
 * `bowling_game_spec.rb`=>  [bowling_game_spec.rb](spec/bowling_game_spec.rb)
+
+###### Support files:
+
 * `bowling_game.rb` =>  [lib/bowling_game.rb](lib/bowling_game.rb)
 
     
-###### Running
+##### Running
 
 To run this spec, on the root of the project enter:
 
@@ -106,7 +119,7 @@ Spec testing the achievement creation
 
 See the following files for a better understanding:
 
-###### Main files:
+###### Spec file:
 
 * `create_achievement_spec.rb`=>  [spec/create_achievement_spec.rb](spec/create_achievement_spec.rb)
 
@@ -118,10 +131,34 @@ See the following files for a better understanding:
 * `achievements.rb` =>  [spec/factories/achievements.rb](spec/factories/achievements.rb) 
 * `users.rb` =>  [spec/factories/users.rb](spec/factories/users.rb) 
     
-###### Running
+##### Running
 
 To run this spec, on the root of the project enter:
 
     rspec spec/create_achievement_spec.rb 
 
 > This spec is failing, the fail is related with the Third API testing with Twitter.
+
+
+### Cucumber examples
+
+#### Reading other achievements feature
+
+Example of a feature with Cucumber testing if a guest user can read other achievements.
+
+See the following files for a better understanding:
+
+###### Feature file:
+
+* `achievement_page.feature`=>  [features/achievement_page.feature](features/achievement_page.feature)
+
+###### Support file:
+* `achievements_steps.rb`=>  [features/step_definitions/achievements_steps.rb](features/step_definitions/achievements_steps.rb)
+
+
+##### Running
+
+To run this feature, on the root of the project enter:
+
+    rails cucumber
+
