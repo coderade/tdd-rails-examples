@@ -2,7 +2,7 @@
 
 This project contains some examples of how use TDD with Ruby on Rails.
 
-### Used technologies
+## Used technologies
 
 The main technologies and Rails gems used in this project are:
 
@@ -41,3 +41,19 @@ to the Rails tests.
 
 As this is a simple application that don't need great data persistence the default database used when a new Ruby on Rails
 application is created has been used: [SQlite3](https://www.sqlite.org/)
+
+##  Examples
+
+#### String Cauculator - Simple Red Green Refactor sample with Minitest
+
+Simple Red Green Refactor sample with Minitest. 
+See the [string_calculator.rb](string_calculator.rb) file.
+
+###### Running
+
+To run on the root of the project enter:
+
+    ruby string_calculator.rb
+    
+
+
