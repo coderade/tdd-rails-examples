@@ -39,8 +39,8 @@ to the Rails tests.
 
 ### Database      
 
-As this is a simple application that don't need great data persistence the default database used when a new Ruby on Rails
-application is created has been used: [SQlite3](https://www.sqlite.org/).
+As this is a simple application that don't need great data persistence. The [SQlite3](https://www.sqlite.org/) has been used 
+that is the default database when a new Ruby on Rails application is created.
 
 ##  Examples
 
@@ -169,6 +169,32 @@ See the following files for a better understanding:
 To run this spec, on the root of the project enter:
 
     rspec spec/controllers/encouragements_controller_spec.rb 
+
+
+#### Achievements Model spec
+
+Spec testing the Achievement model, more specifically the validations, associations, instance methods, db queries  using
+some helpers like the Shoulda-matchers Gem.
+
+See the following files for a better understanding:
+
+###### Spec file:
+
+* `achievement_spec.rb`=>  [spec/models/achievement_spec.rb](spec/models/achievement_spec.rb)
+
+###### Model
+
+* `achievement.rb`=>  [app/models/achievement.rb](app/models/achievement.rb)
+
+###### Factory files:
+* `achievements.rb` =>  [spec/factories/achievements.rb](spec/factories/achievements.rb) 
+* `users.rb` =>  [spec/factories/users.rb](spec/factories/users.rb) 
+    
+##### Running
+
+To run this spec, on the root of the project enter:
+
+    rspec spec/models/achievement_spec.rb
 
 
 ### Cucumber examples
