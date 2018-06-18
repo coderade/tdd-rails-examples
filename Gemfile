@@ -8,24 +8,24 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form'
+gem 'simple_form', '>= 3.5.0'
 
 # RedCarpet gem
 gem 'redcarpet'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.3.1'
 
 
 # Add the bootstrap
@@ -44,24 +44,24 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise'
+gem 'devise', '>= 4.3.0'
 gem 'carrierwave'
 gem 'twitter'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.10.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', '>= 4.8.0'
+  gem 'rspec-rails', '~> 3.6', '>= 3.6.0'
+  gem 'rails-controller-testing', '>= 1.0.2'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.5.1'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -70,8 +70,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '~> 2.13'
-  gem 'cucumber-rails', require: false
+  gem 'capybara', '~> 2.14', '>= 2.14.4'
+  gem 'cucumber-rails', '>= 1.5.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
 	gem 'vcr'
