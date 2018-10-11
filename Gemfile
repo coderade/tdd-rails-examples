@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 3.5.0'
+gem 'simple_form', '>= 4.0.1'
 
 # RedCarpet gem
 gem 'redcarpet'
@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'jquery-rails', '>= 4.3.1'
+gem 'jquery-rails', '>= 4.3.3'
 
 
 # Add the bootstrap
@@ -44,24 +44,24 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise', '>= 4.3.0'
+gem 'devise', '>= 4.4.3'
 gem 'carrierwave'
 gem 'twitter'
-gem 'active_model_serializers', '>= 0.10.6'
+gem 'active_model_serializers', '>= 0.10.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
-  gem 'factory_girl_rails', '>= 4.8.0'
-  gem 'rspec-rails', '~> 3.6', '>= 3.6.0'
+  gem 'factory_girl_rails', '>= 4.9.0'
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'rails-controller-testing', '>= 1.0.2'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.5.1'
+  gem 'web-console', '>= 3.6.2'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -70,8 +70,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '~> 2.14', '>= 2.14.4'
-  gem 'cucumber-rails', '>= 1.5.0', require: false
+  gem 'capybara', '~> 2.18', '>= 2.18.0'
+  gem 'cucumber-rails', '>= 1.6.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
 	gem 'vcr'
