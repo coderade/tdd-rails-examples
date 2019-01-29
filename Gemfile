@@ -44,7 +44,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise', '>= 4.4.3'
+gem 'devise', '>= 4.5.0'
 gem 'carrierwave'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.7'
@@ -55,13 +55,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   gem 'factory_girl_rails', '>= 4.9.0'
-  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.0'
   gem 'rails-controller-testing', '>= 1.0.2'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.6.2'
+  gem 'web-console', '>= 3.7.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
