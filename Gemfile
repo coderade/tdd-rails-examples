@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
+gem 'rails', '~> 5.1.6', '>= 5.1.6.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -47,7 +47,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise', '>= 4.5.0'
 gem 'carrierwave'
 gem 'twitter'
-gem 'active_model_serializers', '>= 0.10.7'
+gem 'active_model_serializers', '>= 0.10.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,7 +55,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   gem 'factory_girl_rails', '>= 4.9.0'
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.0'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
   gem 'rails-controller-testing', '>= 1.0.2'
 end
 
