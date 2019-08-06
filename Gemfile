@@ -39,7 +39,7 @@ gem 'jquery-rails', '>= 4.3.4'
 
 
 # Add the bootstrap
-gem 'bootstrap', '~> 4.1.2.0'
+gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
