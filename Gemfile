@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 4.0.1'
+gem 'simple_form', '>= 4.1.0'
 
 # RedCarpet gem
 gem 'redcarpet'
@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'jquery-rails', '>= 4.3.4'
+gem 'jquery-rails', '>= 4.3.5'
 
 
 # Add the bootstrap
@@ -44,10 +44,10 @@ gem 'bootstrap', '~> 4.3.1.0'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise', '>= 4.5.0'
+gem 'devise', '>= 4.6.1'
 gem 'carrierwave'
 gem 'twitter'
-gem 'active_model_serializers', '>= 0.10.8'
+gem 'active_model_serializers', '>= 0.10.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,8 +55,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   gem 'factory_girl_rails', '>= 4.9.0'
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
-  gem 'rails-controller-testing', '>= 1.0.2'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'rails-controller-testing', '>= 1.0.4'
 end
 
 group :development do
