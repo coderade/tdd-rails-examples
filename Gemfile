@@ -44,7 +44,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise', '>= 4.6.1'
+gem 'devise', '>= 4.7.1'
 gem 'carrierwave'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.9'
