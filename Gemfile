@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6', '>= 5.1.6.2'
+gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 4.1.0'
+gem 'simple_form', '>= 5.0.0'
 
 # RedCarpet gem
 gem 'redcarpet'
@@ -47,7 +47,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 gem 'devise', '>= 4.7.1'
 gem 'carrierwave'
 gem 'twitter'
-gem 'active_model_serializers', '>= 0.10.9'
+gem 'active_model_serializers', '>= 0.10.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -71,7 +71,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
-  gem 'cucumber-rails', '>= 1.6.0', require: false
+  gem 'cucumber-rails', '>= 1.8.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
 	gem 'vcr'
