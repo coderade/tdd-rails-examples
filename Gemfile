@@ -8,18 +8,18 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12', '>= 3.12.4'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 5.0.1'
+gem 'simple_form', '>= 5.0.2'
 
 # RedCarpet gem
 gem 'redcarpet'
@@ -29,7 +29,7 @@ gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.7', '>= 2.7.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -45,7 +45,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 
 
 gem 'devise', '>= 4.7.1'
-gem 'carrierwave'
+gem 'carrierwave', '>= 1.1.0'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.10'
 
@@ -55,7 +55,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver', '>= 3.4.4'
   gem 'factory_girl_rails', '>= 4.9.0'
-  gem 'rspec-rails', '~> 3.9', '>= 3.9.0'
+  gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
   gem 'rails-controller-testing', '>= 1.0.4'
 end
 
@@ -65,15 +65,15 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', '>= 2.0.2'
+  gem 'spring-watcher-listen', '~> 2.0.1'
 end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
   gem 'cucumber-rails', '>= 2.0.0', require: false
   gem 'database_cleaner'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
 	gem 'webmock'
 end
