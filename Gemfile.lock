@@ -364,7 +364,7 @@ DEPENDENCIES
   capybara (~> 2.18, >= 2.18.0)
   carrierwave (>= 1.1.0)
   coffee-rails (~> 4.2, >= 4.2.2)
-  cucumber-rails (>= 2.0.0)
+  cucumber-rails (>= 2.1.0)
   database_cleaner
   devise (>= 4.7.2)
   factory_girl_rails (>= 4.9.0)
