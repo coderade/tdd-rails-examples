@@ -2,7 +2,7 @@
 
 ![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)
 
-**This project has been developed in 2015 for the purpose of  showinf some exaples of the TDD process with Rails on the version 5 and is not maintained anymore. Some libraries are being updated using the [Dependabot](https://dependabot.com/) and [Snyk.io](https://snyk.io/) services, but no further tests are being done.**
+**This project has been developed in 2015 for the purpose of showing some examples of the TDD process with Rails on the version 5 and is not maintained anymore. Some libraries are being updated using the [Dependabot](https://dependabot.com/) and [Snyk.io](https://snyk.io/) services, but no further tests are being done.**
 
 
 This project contains some examples of how use TDD with Ruby on Rails.
