@@ -45,7 +45,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 
 
 gem 'devise', '>= 4.7.2'
-gem 'carrierwave', '>= 1.1.0'
+gem 'carrierwave', '>= 2.1.1'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.10'
 
