@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form', '>= 5.0.2'
 
 # RedCarpet gem
-gem 'redcarpet'
+gem 'redcarpet', '>= 3.5.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
@@ -56,7 +56,7 @@ group :development, :test do
   gem 'selenium-webdriver', '>= 3.4.4'
   gem 'factory_girl_rails', '>= 4.9.0'
   gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
-  gem 'rails-controller-testing', '>= 1.0.4'
+  gem 'rails-controller-testing', '>= 1.0.5'
 end
 
 group :development do
