@@ -161,7 +161,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
-    i18n (1.8.9)
+    i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -364,7 +364,7 @@ DEPENDENCIES
   bootstrap (~> 4.3.1.0)
   byebug
   capybara (~> 2.18, >= 2.18.0)
-  carrierwave (>= 1.1.0)
+  carrierwave (>= 2.1.1)
   coffee-rails (~> 4.2, >= 4.2.2)
   cucumber-rails (>= 2.1.0)
   database_cleaner
