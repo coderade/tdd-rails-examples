@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.6'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -43,9 +43,8 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 gem 'devise', '>= 4.7.3'
-gem 'carrierwave', '>= 1.1.0'
+gem 'carrierwave', '>= 2.1.1'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.12'
 
