@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form', '>= 5.0.3'
 
 # RedCarpet gem
-gem 'redcarpet'
+gem 'redcarpet', '>= 3.5.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
@@ -43,9 +43,8 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 gem 'devise', '>= 4.7.3'
-gem 'carrierwave', '>= 1.1.0'
+gem 'carrierwave', '>= 2.1.1'
 gem 'twitter'
 gem 'active_model_serializers', '>= 0.10.12'
 
