@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 5.0.2'
+gem 'simple_form', '>= 5.0.3'
 
 # RedCarpet gem
 gem 'redcarpet', '>= 3.5.1'
@@ -43,11 +43,10 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
-gem 'devise', '>= 4.7.2'
+gem 'devise', '>= 4.7.3'
 gem 'carrierwave', '>= 2.1.1'
 gem 'twitter'
-gem 'active_model_serializers', '>= 0.10.10'
+gem 'active_model_serializers', '>= 0.10.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
