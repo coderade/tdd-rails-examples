@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -71,7 +71,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
-  gem 'cucumber-rails', '>= 2.1.0', require: false
+  gem 'cucumber-rails', '>= 2.2.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
