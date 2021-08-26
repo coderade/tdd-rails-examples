@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'rails', '~> 5.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form', '>= 5.0.3'
+gem 'simple_form', '>= 5.1.0'
 
 # RedCarpet gem
 gem 'redcarpet', '>= 3.5.1'
@@ -43,7 +43,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.7.3'
+gem 'devise', '>= 4.8.0'
 gem 'carrierwave', '>= 2.1.1'
 gem 'twitter', '>= 6.1.0'
 gem 'active_model_serializers', '>= 0.10.12'
