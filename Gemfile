@@ -45,7 +45,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 
 gem 'devise', '>= 4.8.0'
 gem 'carrierwave', '>= 2.1.1'
-gem 'twitter'
+gem 'twitter', '>= 6.1.0'
 gem 'active_model_serializers', '>= 0.10.12'
 
 group :development, :test do
@@ -74,7 +74,7 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
-	gem 'webmock'
+	gem 'webmock', '>= 3.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
