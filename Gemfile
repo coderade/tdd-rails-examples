@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
+gem 'rails', '~> 6.0.4', '>= 6.0.4.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -60,7 +60,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.7.0'
+  gem 'web-console', '>= 4.1.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -70,7 +70,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
-  gem 'cucumber-rails', '>= 2.3.0', require: false
+  gem 'cucumber-rails', '>= 2.4.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
