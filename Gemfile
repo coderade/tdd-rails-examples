@@ -8,11 +8,11 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.4', '>= 6.0.4.2'
+gem 'rails', '~> 6.0.4', '>= 6.0.4.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 4.3', '>= 4.3.9'
+gem 'puma', '~> 4.3', '>= 4.3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,7 +43,7 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.8.0'
+gem 'devise', '>= 4.8.1'
 gem 'carrierwave', '>= 2.1.1'
 gem 'twitter', '>= 6.1.0'
 gem 'active_model_serializers', '>= 0.10.12'
@@ -60,7 +60,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console', '>= 4.2.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
