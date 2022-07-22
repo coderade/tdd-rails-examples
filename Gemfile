@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.4', '>= 6.0.4.2'
+gem 'rails', '~> 6.0.4', '>= 6.0.4.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -29,7 +29,7 @@ gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7', '>= 2.7.0'
+gem 'jbuilder', '~> 2.10', '>= 2.10.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -43,8 +43,8 @@ gem 'bootstrap', '~> 4.3.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.8.0'
-gem 'carrierwave', '>= 2.1.1'
+gem 'devise', '>= 4.8.1'
+gem 'carrierwave', '>= 2.2.2'
 gem 'twitter', '>= 6.1.0'
 gem 'active_model_serializers', '>= 0.10.12'
 
@@ -60,7 +60,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console', '>= 4.2.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -72,7 +72,7 @@ group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
   gem 'cucumber-rails', '>= 2.4.0', require: false
   gem 'database_cleaner'
-  gem 'shoulda-matchers', '>= 3.1.2', require: false
+  gem 'shoulda-matchers', '>= 4.3.0', require: false
 	gem 'vcr'
 	gem 'webmock', '>= 3.0.1'
 end
