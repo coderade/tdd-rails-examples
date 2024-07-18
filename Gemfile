@@ -70,11 +70,11 @@ end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
-  gem 'cucumber-rails', '>= 2.4.0', require: false
+  gem 'cucumber-rails', '>= 2.5.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
-	gem 'webmock', '>= 3.0.1'
+	gem 'webmock', '>= 3.14.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
