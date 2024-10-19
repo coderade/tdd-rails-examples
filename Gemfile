@@ -8,13 +8,13 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.4', '>= 6.0.4.6'
+gem 'rails', '~> 7.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 4.3', '>= 4.3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.1', '>= 5.1.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -39,7 +39,7 @@ gem 'jquery-rails', '>= 4.4.0'
 
 
 # Add the bootstrap
-gem 'bootstrap', '~> 4.3.1.0'
+gem 'bootstrap', '~> 4.6.2.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
