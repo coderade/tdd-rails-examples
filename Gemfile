@@ -70,7 +70,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.18', '>= 2.18.0'
-  gem 'cucumber-rails', '>= 2.4.0', require: false
+  gem 'cucumber-rails', '>= 3.0.0', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '>= 3.1.2', require: false
 	gem 'vcr'
